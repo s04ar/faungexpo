@@ -60,9 +60,7 @@ const LoginScreen = ({ navigation }) => {
         >
           Sign in
         </Button>
-
       </View>
-
       <View style={styles.switchScreenText}>
         <Text>
           Don't have an account yet?
@@ -76,15 +74,10 @@ const LoginScreen = ({ navigation }) => {
         onPress={() => navigation.navigate('register')}>Register Account now beeeeeeeeeich
       </Button>
       <p>esreveR Approved woopwoop</p>
-    </View>
-    
-    
+    </View> 
   )
   const LoginScreen = ({ navigation }) => {
     
-
-
-  }
-  
+  } 
 };
 export default LoginScreen;

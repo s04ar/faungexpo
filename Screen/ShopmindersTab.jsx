@@ -2,14 +2,19 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import ViewAll from './shopminders/ViewAll';
+import AddOne from './shopminders/AddOne';
+
 const Stack = createStackNavigator();
+
 const ShopmindersTab = () => {
+
   const forFade = ({ current }) => ({
     cardStyle: {
       opacity: current.progress,
       backgroundColor: 'transparent',
     },
   });
+
   return (
     <>
       <StatusBar style="light" />
@@ -25,6 +30,15 @@ const ShopmindersTab = () => {
           component={ViewAll}
           options={{
             title: 'Shopminders',
+            cardStyleInterpolator: forFade,
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="AddOne"
+          component={AddOne}
+          options={{
+            title: 'Add Shopminder',
             cardStyleInterpolator: forFade,
             headerTintColor: '#fff',
           }}
